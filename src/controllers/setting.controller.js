@@ -5,11 +5,22 @@ Setting.findAll(function(err, setting) {
   console.log('controller')
   if (err)
   res.send(err);
-  console.log('res', setting);
+//   console.log('res', setting);
   res.send(setting);
 });
 };
 
+
+
+exports.findActive = function(req, res) {
+    Setting.findActive(function(err, setting) {
+      console.log('controller')
+      if (err)
+      res.send(err);
+      console.log('res', setting);
+      res.send(setting);
+    });
+};
 
 exports.create = function (req, res) {
     const new_setting = new Setting(req.body);
@@ -25,6 +36,27 @@ exports.create = function (req, res) {
     }
 };
 
+
+exports.setActive = function (req, res) {
+    Setting.setActive(req.body.id, function (err, setting) {
+        if (err){
+            console.log(err)    
+            return res.send(err);    
+        }
+
+        return res.json(setting);
+    });
+};
+
+exports.setInActive = function (req, res) {
+    Setting.setInActive(req.body.id, function (err, setting) {
+        if (err){
+            console.log(err)    
+            return res.send(err);    
+        }
+        return res.json(setting);
+    });
+};
 
 // exports.findById = function (req, res) {
 //     Setting.findById(req.params.id, function (err, setting) {
