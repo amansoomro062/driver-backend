@@ -14,8 +14,7 @@ Admin.findByEmailAndPassword = function ([email,password], result) {
         }
         else {
             console.log(typeof(res))
-            result(res, res);
-            
+            result(res, res);     
         }
     });
 };
