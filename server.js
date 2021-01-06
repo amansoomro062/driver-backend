@@ -18,9 +18,12 @@ app.get('/', (req, res) => {
 // Require setting routes
 const settingRoutes = require('./src/routes/setting.routes')
 const adminRoutes = require('./src/routes/admin.routes')
+const positionRoutes = require('./src/routes/position.routes')
 
 // using as middleware
 app.use('/api/v1/settings', settingRoutes)
+app.use('/api/v1/settings/position', positionRoutes)
+
 app.use('/api/v1/admin', adminRoutes)
 
 // listen for requests
