@@ -20,11 +20,14 @@ const settingRoutes = require('./src/routes/setting.routes')
 const adminRoutes = require('./src/routes/admin.routes')
 const positionRoutes = require('./src/routes/position.routes')
 
+const userRoutes = require('./src/routes/user.routes')
+
 // using as middleware
 app.use('/api/v1/settings', settingRoutes)
 app.use('/api/v1/settings/position', positionRoutes)
 
 app.use('/api/v1/admin', adminRoutes)
+app.use('/api/v1/user', userRoutes)
 
 // listen for requests
 app.listen(port, () => {
