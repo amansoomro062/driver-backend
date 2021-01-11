@@ -24,6 +24,9 @@ const userRoutes = require('./src/routes/user.routes')
 
 const welcomeRoutes = require('./src/routes/welcome.routes')
 
+
+const formRoutes = require('./src/routes/form.routes')
+
 // using as middleware
 app.use('/api/v1/settings', settingRoutes)
 app.use('/api/v1/settings/position', positionRoutes)
@@ -32,6 +35,7 @@ app.use('/api/v1/admin', adminRoutes)
 app.use('/api/v1/user', userRoutes)
 
 app.use('/api/v1/welcome', welcomeRoutes)
+app.use('/api/v1/form', formRoutes)
 
 // listen for requests
 app.listen(port, () => {
