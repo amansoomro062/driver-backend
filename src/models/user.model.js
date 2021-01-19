@@ -72,9 +72,23 @@ User.sendPassword = function (email, result) {
                             }
                             else {
                                 console.log(typeof(res))
-                                return result(true, res);     
+                                console.log(res.insertId);
+                                const id = res.insertId;
+
+                                dbConn.query("INSERT into form_status (one, two, three, four, five, six, seven, eight, nine, ten,eleven,twelve, thirteen, fourteen, user_id) VALUES (0,0,0,0,0,0,0,0,0,0,0,0,0,0,?)", id, function (err, res) {
+                                    if (err) {
+                                        console.log("error: ", err);
+                                        result(false, null);
+                                    }
+                                    else {
+                                        console.log(typeof(res))
+                                        return result(true, res);     
+                                    }
+                                });    
                             }
                         });
+
+
                     }
                 }
                 });
