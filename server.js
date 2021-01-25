@@ -46,6 +46,8 @@ const licenseRoutes = require('./src/routes/license.routes')
 const accidentRoutes = require('./src/routes/accident.routes')
 const accidentRoutes2 = require('./src/routes/accident2.routes')
 
+const certificationRoutes = require('./src/routes/certification.routes')
+
 const licenseRoutes2 = require('./src/routes/license2.routes')
 
 // using as middleware
@@ -75,6 +77,9 @@ app.use('/api/v1/accident', accidentRoutes)
 app.use('/api/v1/accident2', accidentRoutes2)
 
 app.use('/api/v1/license2', licenseRoutes2)
+
+app.use('/api/v1/certification', certificationRoutes)
+
 
 app.use('/api/v1/form', formRoutes)
 
