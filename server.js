@@ -35,6 +35,19 @@ const depositRoutes = require('./src/routes/deposit.routes')
 
 const criminalRoutes = require('./src/routes/criminal.routes')
 
+const drugAndAlcoholRoutes = require('./src/routes/drug.routes')
+
+const citizenshipRoutes = require('./src/routes/citizenship.routes')
+
+const drivingExperienceRoute = require('./src/routes/driving.routes')
+
+const licenseRoutes = require('./src/routes/license.routes')
+
+const accidentRoutes = require('./src/routes/accident.routes')
+const accidentRoutes2 = require('./src/routes/accident2.routes')
+
+const licenseRoutes2 = require('./src/routes/license2.routes')
+
 // using as middleware
 app.use('/api/v1/settings', settingRoutes)
 app.use('/api/v1/settings/position', positionRoutes)
@@ -51,6 +64,17 @@ app.use('/api/v1/signature', signatureRoutes)
 app.use('/api/v1/deposit', depositRoutes)
 
 app.use('/api/v1/criminal-background', criminalRoutes)
+app.use('/api/v1/drug-and-alcohol', drugAndAlcoholRoutes)
+
+app.use('/api/v1/citizenship', citizenshipRoutes)
+
+app.use('/api/v1/driving-experience', drivingExperienceRoute)
+
+app.use('/api/v1/license', licenseRoutes)
+app.use('/api/v1/accident', accidentRoutes)
+app.use('/api/v1/accident2', accidentRoutes2)
+
+app.use('/api/v1/license2', licenseRoutes2)
 
 app.use('/api/v1/form', formRoutes)
 
