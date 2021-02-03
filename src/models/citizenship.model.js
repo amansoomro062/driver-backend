@@ -1,18 +1,19 @@
 'use strict';
 var dbConn = require('../../config/db.config');
 //Setting object create
-var Citizenship = function (drug) {
-    this.allowedToWork = drug.allowedToWork
-    this.greenCard = drug.greenCard
-    this.greenCardExpiration = drug.greenCardExpiration
-    this.greenCardIssueDate = drug.greenCardIssueDate
-    this.permanentResident = drug.permanentResident
-    this.usCitizen = drug.usCitizen
-    this.workPermit = drug.workPermit
-    this.workPermitExpiration = drug.workPermitExpiration
-    this.workPermitIssueDate = drug.workPermitIssueDate
-    this.workPermitNumber = drug.workPermitNumber
-    this.user_id = drug.user_id
+var Citizenship = function (citizenship) {
+    this.allowedToWork = citizenship.allowedToWork
+    this.greenCard = citizenship.greenCard
+    this.greenCardExpiration = citizenship.greenCardExpiration
+    this.greenCardIssueDate = citizenship.greenCardIssueDate
+    this.permanentResident = citizenship.permanentResident
+    this.usCitizen = citizenship.usCitizen
+    this.socialNumber = citizenship.socialNumber
+    this.workPermit = citizenship.workPermit
+    this.workPermitExpiration = citizenship.workPermitExpiration
+    this.workPermitIssueDate = citizenship.workPermitIssueDate
+    this.workPermitNumber = citizenship.workPermitNumber
+    this.user_id = citizenship.user_id
 };
 
 Citizenship.create = function (newEmp, result) {

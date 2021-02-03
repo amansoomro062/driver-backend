@@ -11,7 +11,6 @@ var Contact = function (contact) {
     this.middleName = contact.middleName
     this.mobilePhone = contact.mobilePhone
     this.otherPhone = contact.otherPhone
-    this.socialNumber = contact.socialNumber
     this.state = contact.state
     this.street = contact.street
     this.zip = contact.zip

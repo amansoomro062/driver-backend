@@ -7,6 +7,7 @@ var Accident = function (accident) {
     this.hazardousMaterialSpill  = accident.hazardousMaterialSpill
     this.injuries = accident.injuries
     this.user_id =accident.user_id
+    // this.accidents = accident.accident
 };
 
 Accident.create = function (newEmp, result) {
