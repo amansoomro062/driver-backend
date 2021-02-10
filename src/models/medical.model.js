@@ -22,4 +22,18 @@ Medical.create = function (newEmp, result) {
 };
 
 
+Medical.get = function (id,result) {
+    dbConn.query("Select * from medical where user_id = ?",id, function (err, res) {
+        if (err) {
+            console.log("error: ", err);
+            result(null, err);
+        }
+        else {
+            console.log('settings : ', res);
+            result(null, res);
+        }
+    });
+};
+
+
 module.exports = Medical;

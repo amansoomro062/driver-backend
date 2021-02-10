@@ -17,3 +17,14 @@ exports.create = function (req, res) {
         });
     }
 };
+
+exports.get = function (req, res) {
+    Contact.get(req.params.id, function (err, setting) {
+        if (err){
+            console.log(err)    
+            return res.send(err);    
+        }
+        return res.json(setting);
+    });
+};
+

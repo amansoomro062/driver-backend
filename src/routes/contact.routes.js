@@ -3,5 +3,7 @@ const router = express.Router()
 const contactController =   require('../controllers/contact.controller');
 
 router.post('/', contactController.create);
+router.get('/:id', contactController.get);
+
 
 module.exports = router

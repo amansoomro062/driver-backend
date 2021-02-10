@@ -29,5 +29,18 @@ Contact.create = function (newEmp, result) {
     });
 };
 
+Contact.get = function (id,result) {
+    dbConn.query("Select * from contact where user_id = ?",id, function (err, res) {
+        if (err) {
+            console.log("error: ", err);
+            result(null, err);
+        }
+        else {
+            console.log('settings : ', res);
+            result(null, res);
+        }
+    });
+};
+
 
 module.exports = Contact;
